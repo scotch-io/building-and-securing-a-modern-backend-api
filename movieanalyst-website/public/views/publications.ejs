@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <style>
+    body {
+      background-color: #ecedec;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1><span class="glyphicon glyphicon-tower"></span></h1>
+    <h2>Our Publication Partners</h2>
+  </div>
+  
+  <div class="row">
+  <% publications.forEach(function(publication, index) { %>
+    <div class="col-sm-4">
+      <div class="panel">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= publication.name %></h3>
+        </div>
+        <div class="panel-body text-center">
+          <h1><span class="glyphicon <%= publication.avatar %>"></span></h1>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+  </div>
+</div>
+
+</body>
+</html>
